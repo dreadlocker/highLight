@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Array Reduce Cardio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js"></script>
   </head>
 
   <body>
@@ -224,108 +226,5 @@
         tempora ea distinctio dolorem numquam?
       </p>
     </div>
-
-    <!-- version 2 -->
-    <script>
-      const allAnchors = document.querySelectorAll("a");
-
-      function highlightMe(e) {
-        this.firstElementChild.classList.add("highlight");
-      }
-
-      function makeMeNormal() {
-        this.firstElementChild.classList.remove("highlight");
-      }
-
-      allAnchors.forEach(anchor => {
-        anchor.addEventListener("mouseenter", highlightMe);
-        anchor.addEventListener("mouseleave", makeMeNormal);
-      });
-    </script>
-
-    <style>
-      body,
-      html {
-        margin: 0;
-        padding: 0;
-        height: 100%;
-        width: 100%;
-        background-color: black;
-        color: white;
-      }
-
-      #wrapper {
-        display: flex;
-        justify-content: space-evenly;
-        flex-wrap: wrap;
-        padding-top: 1em;
-      }
-
-      a {
-        z-index: 1;
-      }
-
-      .highlight {
-        background-color: white;
-        border-radius: 0.5em;
-      }
-    </style>
   </body>
 </html>
-
-<!-- version 1
-  <script>
-    const allAnchors = document.querySelectorAll("a");
-
-    const highlight = document.createElement("span");
-    highlight.classList.add("highlight");
-    document.body.append(highlight);
-
-    function highlightMe() {
-      const linkCoords = this.getBoundingClientRect();
-      const coords = {
-        width: linkCoords.width,
-        height: linkCoords.height,
-        top: linkCoords.top + window.scrollY,
-        left: linkCoords.left + window.scrollX
-      };
-
-      highlight.style.width = `${coords.width}px`;
-      highlight.style.height = `${coords.height}px`;
-      highlight.style.top = `${coords.top}px`;
-      highlight.style.left = `${coords.left}px`;
-    }
-
-    allAnchors.forEach(anchor => {
-      anchor.addEventListener("mouseenter", highlightMe);
-    });
-  </script>
-
-  <style>
-    body,
-    html {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      width: 100%;
-      background-color: black;
-      color: white;
-    }
-
-    #wrapper {
-      display: flex;
-      justify-content: space-evenly;
-      flex-wrap: wrap;
-      padding-top: 1em;
-    }
-
-    a {
-      z-index: 1;
-    }
-
-    .highlight {
-      background-color: white;
-      position: absolute;
-      border-radius: 0.5em;
-    }
-  </style> -->
